@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">TaskFlow</div>
+        <p>Organize your day, one task at a time.</p>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <div>
+                <h1>My Tasks</h1>
+                <p>Make today productive.</p>
+            </div>
+            <div class="task-summary">
+                <span id="completed-count">0</span> completed
+            </div>
+        </section>
+
+        <section class="task-form">
+            <h2>Add a New Task</h2>
+
+            <form id="task-form">
+                <label for="task-title">Task name</label>
+                <input
+                    type="text"
+                    id="task-title"
+                    placeholder="What do you need to do?"
+                    required
+                >
+
+                <div class="form-row">
+                    <div>
+                        <label for="task-priority">Priority</label>
+                        <select id="task-priority">
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="task-deadline">Deadline</label>
+                        <input type="date" id="task-deadline">
+                    </div>
+                </div>
+
+                <button type="submit" class="add-button">
+                    + Add Task
+                </button>
+            </form>
+        </section>
+
+        <section class="task-list-section">
+            <div class="list-heading">
+                <h2>Your Tasks</h2>
+
+                <select id="task-filter" aria-label="Filter tasks">
+                    <option value="all">All Tasks</option>
+                    <option value="active">Active</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+
+            <div id="task-list">
+                <p class="empty-message">No tasks yet. Add your first task!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with HTML, CSS & JavaScript.</p>
+    </footer>
+</body>
+</html>
